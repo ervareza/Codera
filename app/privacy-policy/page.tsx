@@ -1,28 +1,39 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 
-export default function Page() {
+const fadeInUp: Variants = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+};
+
+export default function PrivacyPolicy() {
   return (
-    <div className="flex flex-col min-h-[80vh] pt-40 pb-24 px-6 max-w-4xl mx-auto w-full">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-8">Privacy Policy</h1>
-        
-        <div className="space-y-6 text-gray-600 leading-relaxed">
-          <p className="text-lg">This is a premium placeholder page for Privacy Policy.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          
-          <div className="bg-white rounded-3xl p-8 border border-gray-100 mt-12 shadow-sm">
-            <h2 className="text-xl font-semibold text-black mb-4">Dynamic Content Area</h2>
-            <p className="text-sm">Content related to Privacy Policy will go here. The dynamic layout structure is ready and fully integrated into the global animated site architecture. Replace this text with your specific business details.</p>
-          </div>
+    <div className="min-h-screen pt-32 pb-24 px-6 max-w-3xl mx-auto w-full">
+      <motion.div initial="initial" animate="animate" variants={fadeInUp}>
+        <div className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4">Privacy Policy</h1>
+          <p className="text-gray-500 font-medium">Last updated: May 13, 2026</p>
+        </div>
+
+        <div className="space-y-8 text-gray-600 leading-relaxed text-[15px]">
+          <p className="text-lg text-gray-900 font-medium">Codera takes your privacy and data security seriously. We comply with GDPR, CCPA, and global data protection standards.</p>
+          <section>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
+            <p>When operating our Services, we collect live telematics data including GPS coordinates, vehicle speed, engine diagnostics, fuel consumption, and dashcam video footage. We also collect account information such as names, emails, and billing details required to maintain your account.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">2. How We Use Information</h2>
+            <p>The telematics data collected is processed in real-time to provide you with dashboard analytics, predictive maintenance alerts, and driver coaching capabilities. We do not sell your personal data or fleet telemetry to third-party brokers or insurance companies without your explicit, opt-in consent.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">3. Data Security</h2>
+            <p>We use state-of-the-art encryption (AES-256) to protect data both at rest and in transit. Our cloud infrastructure is hosted on secure, SOC2 compliant AWS data centers.</p>
+          </section>
         </div>
       </motion.div>
     </div>
   );
 }
+

@@ -1,28 +1,55 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 
-export default function Page() {
+const fadeInUp: Variants = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+};
+
+export default function CaseStudies() {
+  const cases = [
+    { title: "Scan Global Logistics", stat: "27%", metric: "Fuel Cost Reduction", desc: "How SGL implemented Codera's predictive routing to bypass traffic and reduce idle engine times across Europe.", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2940&auto=format&fit=crop" },
+    { title: "Metro Transit Authority", stat: "40%", metric: "Drop in Accidents", desc: "Using AI Dashcams, MTA identified risky driver behaviors and implemented automated coaching, drastically improving safety.", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2940&auto=format&fit=crop" },
+    { title: "BuildCorp Heavy", stat: "15x", metric: "ROI in 6 Months", desc: "Asset trackers prevented the theft of three excavators, paying for the entire fleet's software subscription 15 times over.", img: "https://images.unsplash.com/photo-1541888086925-0c770f4e8587?q=80&w=2940&auto=format&fit=crop" },
+    { title: "Fresh Foods Delivery", stat: "99.9%", metric: "On-Time Delivery", desc: "Integrating Codera API with their ERP allowed dynamic re-routing based on live temperature sensor data.", img: "https://images.unsplash.com/photo-1628131336100-3cb83ed3c178?q=80&w=2940&auto=format&fit=crop" }
+  ];
+
   return (
-    <div className="flex flex-col min-h-[80vh] pt-40 pb-24 px-6 max-w-4xl mx-auto w-full">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-8">Case Studies</h1>
-        
-        <div className="space-y-6 text-gray-600 leading-relaxed">
-          <p className="text-lg">This is a premium placeholder page for Case Studies.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div className="bg-[#F8F9FA] min-h-screen pt-32 pb-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <motion.div initial="initial" animate="animate" variants={{ animate: { transition: { staggerChildren: 0.1 } } }}>
+          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold tracking-tighter text-gray-900 mb-6">Success Stories.</motion.h1>
+          <motion.p variants={fadeInUp} className="text-xl text-gray-500 tracking-tight max-w-2xl mb-16">See how global leaders are transforming their operations using Codera's intelligent fleet platform.</motion.p>
           
-          <div className="bg-white rounded-3xl p-8 border border-gray-100 mt-12 shadow-sm">
-            <h2 className="text-xl font-semibold text-black mb-4">Dynamic Content Area</h2>
-            <p className="text-sm">Content related to Case Studies will go here. The dynamic layout structure is ready and fully integrated into the global animated site architecture. Replace this text with your specific business details.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {cases.map((cs, idx) => (
+              <motion.div key={idx} variants={fadeInUp} whileHover={{ y: -8 }} className="bg-white rounded-[2rem] overflow-hidden group border border-gray-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] cursor-pointer">
+                <div className="relative h-64 w-full bg-gray-100 overflow-hidden">
+                  <Image src={cs.img} fill className="object-cover group-hover:scale-105 transition-transform duration-700" alt={cs.title} />
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 rounded-full flex items-center gap-1 font-bold text-sm tracking-tight text-black">
+                    Read Story <ArrowUpRight className="w-4 h-4" />
+                  </div>
+                </div>
+                <div className="p-8 md:p-10">
+                  <div className="flex justify-between items-end mb-6">
+                    <div>
+                      <div className="text-4xl font-black tracking-tighter text-blue-600 mb-1">{cs.stat}</div>
+                      <div className="text-sm font-bold tracking-widest uppercase text-gray-400">{cs.metric}</div>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 tracking-tight">{cs.title}</h3>
+                  <p className="text-gray-500 leading-relaxed text-sm">{cs.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }
+
