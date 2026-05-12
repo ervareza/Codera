@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, Variants } from 'motion/react';
 import { 
   ChevronDown, 
   Settings, 
@@ -14,12 +14,12 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+  animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   animate: { transition: { staggerChildren: 0.1 } }
 };
 
@@ -43,7 +43,7 @@ export default function Page() {
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
         className="flex items-center justify-between py-6 px-6 md:px-12 max-w-[1400px] w-full mx-auto backdrop-blur-sm z-50"
       >
         <div className="flex items-center gap-12">
