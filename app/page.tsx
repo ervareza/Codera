@@ -39,42 +39,7 @@ export default function Page() {
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
-      {/* Navbar */}
-      <motion.nav 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="flex items-center justify-between py-6 px-6 md:px-12 max-w-[1400px] w-full mx-auto backdrop-blur-sm z-50"
-      >
-        <div className="flex items-center gap-12">
-          <motion.div whileHover={{ scale: 1.05 }} className="font-bold text-lg flex items-center gap-2 tracking-tight cursor-pointer">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4H10V10H4V4Z" fill="black" />
-              <path d="M14 14H20V20H14V14Z" fill="black" />
-              <path d="M4 14H10V20H4V14Z" fill="black" opacity="0.3" />
-              <path d="M14 4H20V10H14V4Z" fill="black" opacity="0.3" />
-            </svg>
-            CODERA
-          </motion.div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-800">
-            <a href="#" className="flex items-center gap-1 hover:text-black transition-colors">Solutions <ChevronDown className="w-3 h-3 text-gray-400" /></a>
-            <a href="#" className="flex items-center gap-1 hover:text-black transition-colors">Products <ChevronDown className="w-3 h-3 text-gray-400" /></a>
-            <a href="#" className="hover:text-black transition-colors">About</a>
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-1 text-sm font-medium hover:text-black cursor-pointer transition-colors">
-            En <ChevronDown className="w-3 h-3 text-gray-400" />
-          </div>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-[#111111] text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-black transition-colors shadow-sm"
-          >
-            Get a Demo
-          </motion.button>
-        </div>
-      </motion.nav>
+      {/* Navbar moved to layout.tsx */}
 
       <main className="flex-grow">
         {/* Hero Section */}
@@ -489,58 +454,7 @@ export default function Page() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="py-16 md:py-20 border-t border-gray-100 px-6 max-w-[1400px] mx-auto w-full text-sm">
-        <div className="grid grid-cols-2 md:grid-cols-12 gap-12 md:gap-8 mb-24">
-          <div className="col-span-2 md:col-span-4 flex flex-col justify-between">
-            <div className="font-bold flex items-center gap-2 tracking-tight">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4H10V10H4V4Z" fill="black" />
-                <path d="M14 14H20V20H14V14Z" fill="black" />
-                <path d="M4 14H10V20H4V14Z" fill="black" opacity="0.3" />
-                <path d="M14 4H20V10H14V4Z" fill="black" opacity="0.3" />
-              </svg>
-              CODERA
-            </div>
-            
-            <div className="flex gap-6 mt-12 md:mt-0">
-              <a href="#" className="font-medium text-gray-900 hover:text-gray-600 transition-colors">x.com</a>
-              <a href="#" className="font-medium text-gray-900 hover:text-gray-600 transition-colors">facebook.com</a>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-5 md:col-span-2">
-            <a href="#" className="font-medium text-gray-900 hover:text-black">Solutions</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Services</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Products</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Case Studies</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Pricing</a>
-          </div>
-
-          <div className="flex flex-col gap-5 md:col-span-2">
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">About Us</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Blog</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">News</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">FAQ</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Support</a>
-          </div>
-
-          <div className="flex flex-col gap-5 md:col-span-2">
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Contact Us</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Locations</a>
-          </div>
-
-          <div className="flex flex-col gap-5 md:col-span-2">
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-black transition-colors">Cookies Policy</a>
-          </div>
-        </div>
-
-        <div className="text-center md:text-left text-gray-400 text-[11px] font-medium tracking-wide">
-          © 2026 Codera Inc. All rights reserved. Powered by New Saint Digital.
-        </div>
-      </footer>
+      {/* Footer moved to layout.tsx */}
     </div>
   );
 }
