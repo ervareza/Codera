@@ -538,7 +538,7 @@ export default function Page() {
         </div>
 
         <div className="text-center md:text-left text-gray-400 text-[11px] font-medium tracking-wide">
-          © 2024 Codera Inc. All rights reserved.
+          © 2026 Codera Inc. All rights reserved. Powered by New Saint Digital.
         </div>
       </footer>
     </div>

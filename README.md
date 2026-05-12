@@ -47,4 +47,4 @@ npx vercel
 For more detailed instructions, refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
 
 ## License
-© 2024 Codera Inc. All rights reserved.
+© 2026 Codera Inc. All rights reserved. Powered by New Saint Digital.
