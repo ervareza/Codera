@@ -15,7 +15,7 @@ export default function CaseStudies() {
     { title: "Scan Global Logistics", stat: "27%", metric: "Fuel Cost Reduction", desc: "How SGL implemented Codera's predictive routing to bypass traffic and reduce idle engine times across Europe.", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2940&auto=format&fit=crop" },
     { title: "Metro Transit Authority", stat: "40%", metric: "Drop in Accidents", desc: "Using AI Dashcams, MTA identified risky driver behaviors and implemented automated coaching, drastically improving safety.", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2940&auto=format&fit=crop" },
     { title: "BuildCorp Heavy", stat: "15x", metric: "ROI in 6 Months", desc: "Asset trackers prevented the theft of three excavators, paying for the entire fleet's software subscription 15 times over.", img: "https://images.unsplash.com/photo-1541888086925-0c770f4e8587?q=80&w=2940&auto=format&fit=crop" },
-    { title: "Fresh Foods Delivery", stat: "99.9%", metric: "On-Time Delivery", desc: "Integrating Codera API with their ERP allowed dynamic re-routing based on live temperature sensor data.", img: "https://images.unsplash.com/photo-1628131336100-3cb83ed3c178?q=80&w=2940&auto=format&fit=crop" }
+    { title: "Fresh Foods Delivery", stat: "99.9%", metric: "On-Time Delivery", desc: "Integrating Codera API with their ERP allowed dynamic re-routing based on live temperature sensor data.", img: "https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=2940&auto=format&fit=crop" }
   ];
 
   return (
@@ -52,4 +52,5 @@ export default function CaseStudies() {
     </div>
   );
 }
+
 

@@ -12,7 +12,7 @@ const fadeInUp: Variants = {
 export default function Locations() {
   const locations = [
     { city: "San Francisco", region: "North America (HQ)", img: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=2940&auto=format&fit=crop" },
-    { city: "London", region: "Europe & UK", img: "https://images.unsplash.com/photo-1513635269975-5969336ac1cb?q=80&w=2940&auto=format&fit=crop" },
+    { city: "London", region: "Europe & UK", img: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=2940&auto=format&fit=crop" },
     { city: "Singapore", region: "Asia Pacific", img: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=2940&auto=format&fit=crop" },
     { city: "Jakarta", region: "Southeast Asia", img: "https://images.unsplash.com/photo-1555899434-94d1368aa7af?q=80&w=2940&auto=format&fit=crop" }
   ];
@@ -41,4 +41,5 @@ export default function Locations() {
     </div>
   );
 }
+
 

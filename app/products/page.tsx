@@ -12,7 +12,7 @@ const fadeInUp: Variants = {
 export default function Products() {
   const products = [
     { name: "C1 OBD-II Tracker", type: "Plug & Play", desc: "Installs in seconds. Perfect for light commercial vehicles and sales fleets. Reads engine RPM, fuel level, and diagnostic codes.", img: "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2940&auto=format&fit=crop" },
-    { name: "H4 Heavy-Duty Unit", type: "Hardwired", desc: "Built for trucks. IP67 waterproof rating, backup battery, and support for multiple temperature and fuel sensors.", img: "https://images.unsplash.com/photo-1621695420310-74b88b0a514e?q=80&w=2940&auto=format&fit=crop" },
+    { name: "H4 Heavy-Duty Unit", type: "Hardwired", desc: "Built for trucks. IP67 waterproof rating, backup battery, and support for multiple temperature and fuel sensors.", img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2940&auto=format&fit=crop" },
     { name: "Vision AI Dashcam", type: "Video Telematics", desc: "Dual-facing camera that uses AI to detect distracted driving, phone usage, and harsh braking. Auto-uploads critical events.", img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2940&auto=format&fit=crop" }
   ];
 
@@ -51,4 +51,5 @@ export default function Products() {
     </div>
   );
 }
+
 

@@ -12,7 +12,7 @@ const fadeInUp: Variants = {
 
 export default function Blog() {
   const articles = [
-    { tag: "Guide", title: "5 Proven Ways to Reduce Fleet Fuel Consumption by 20%", readTime: "8 min read", img: "https://images.unsplash.com/photo-1610444391696-670557bfecdb?q=80&w=2940&auto=format&fit=crop" },
+    { tag: "Guide", title: "5 Proven Ways to Reduce Fleet Fuel Consumption by 20%", readTime: "8 min read", img: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=2940&auto=format&fit=crop" },
     { tag: "Tech", title: "Why AI Dashcams are the Future of Driver Safety", readTime: "5 min read", img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2940&auto=format&fit=crop" },
     { tag: "Compliance", title: "Navigating the New 2026 Electronic Logging Device (ELD) Mandates", readTime: "12 min read", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" },
     { tag: "Logistics", title: "The Hidden Costs of Unplanned Maintenance", readTime: "6 min read", img: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=2940&auto=format&fit=crop" },
@@ -58,4 +58,5 @@ export default function Blog() {
     </div>
   );
 }
+
 
